@@ -8,12 +8,12 @@
 </head>
 <body class="bg-gray-50">
     <!--Este é o cabeçalho do site, onde se localiza a logo e as navs de suporte ao usuário-->
-    <header class=" max-w-full mx-auto px-10 h-12 w-full flex items-center justify-between bg-white ">
+    <header class=" max-w-full mx-auto px-10 h-12 w-full flex items-center justify-between bg-white md:h-14 lg:h-20">
 
         <!--Conteúdo presente dentro do cabeçalho-->
-        <img src="images/icons/logo-da-empresa.png" alt="logo" class="h-14  w-12">
+        <img src="images/icons/logo-da-empresa.png" alt="logo" class="w-12 md:w-16 lg:w-20">
         <!--Menu do cabeçalho (presente no canto direito da tela)-->
-        <menu class="flex gap-2 text-[12px]">
+        <menu class="flex gap-2 text-[12px] md:gap-6 lg:text-[14px]">
             <nav><a href="#" class="hover:underline">Como Reservar</a></nav>
             <nav><a href="#" class="hover:underline">Sobre nós</a></nav>
             <nav><a href="#" class="hover:underline">Informações</a></nav>
@@ -23,30 +23,31 @@
     </header>
     <!--Conteúdo Principal da página-->
     <main>
-        <!--Caixa abaixo do header com imagem de fundo e botoes para seleção de estado, idade e busca-->
-        <div class="flex flex-col items-center justify-center w-full h-64 bg-center bg-cover"
+        <!--Caixa abaixo do header com imagem de fundo e botoes para seleção de estado, cidade e busca-->
+        <div class="flex flex-col items-center justify-center w-full h-64 bg-center bg-cover md:h-92"
         style="background-image: url(images/topo-banner.png);">
             <!--Tpitulo e paragráfo acima dos botões-->
-            <h1 class="text-white text-2xl my-2">Onde você quer ir?</h1>
-            <p class="text-white text-center text-[12px]">Escolha o Estado e Cidade para achar o melhor Resort</p>
+            <h1 class="text-white text-2xl my-2 lg:text-[25px]">Onde você quer ir?</h1>
+            <p class="text-white text-center text-[12px] lg:text-[16px]">Escolha o Estado e Cidade para achar o melhor Resort</p>
 
             <!--Fomulário com Botões de seleção para estado e cidade-->
             <div class="mt-7">
                 <form class="flex flex-col items-center justify-center gap-5">
 
                     <div class="w-full flex items-center justify-center gap-3 mb-2">
-                        <select class="bg-gray-50 px-3 py-2 border border-gray-300 rounded text-gray-500 text-sm">
+                        <select class="bg-gray-50 px-3 py-2 border border-gray-300 rounded text-gray-500 text-sm lg:text-[20px]">
                             <option value="">Escolha o Estado</option>
                         </select>
-                        <select class="bg-gray-50 px-3 py-2 border border-gray-300 rounded text-gray-500 text-sm">
+
+                        <select class="bg-gray-50 px-3 py-2 border border-gray-300 rounded text-gray-500 text-sm lg:text-[20px]">
                             <option value="">Escolha a Cidade</option>
                         </select>
                     </div>
 
                     <!--Botão de busca -->
-                    <button class="inline-flex items-center text-yellow-900 bg-yellow-500 font-medium px-3 py-2 rounded text-sm">
+                    <button class="inline-flex items-center text-yellow-900 bg-yellow-400 hover:bg-yellow-500 font-medium px-3 py-2 rounded text-sm lg:text-[17px] cursor-pointer ">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path class="w-3 h-3 mr-2" stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        <path class="w-5 h- mr-2" stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                         </svg>
                         Pesquisar Resort
                     </button>
@@ -55,71 +56,66 @@
         </div>
 
         <!--section dedicada a falar mais detalhes sobre o resort em destaque!-->
-        <section class="flex flex-col wrap-normal items-start px-3 w-full">
-            <!--Caixa de texto posicionada ao lado direito (no desktop) que ocupa 1/2 da tela-->
-            <div class="w-full text-gray-700">
+        <section class="flex flex-col md:flex-row items-start px-3 w-full">
 
-                <!--Caixa de imagem posicionada ao lado direito da tela (desktop) ocupando também 1/2 da tela-->
-                <div class="flex justify-center mt-12">
-                    <figure>
-                        <img src="images/praia-1.jpg" alt="foto do local" class="h-48 ">
-                    </figure>
-                </div>
-
-                <div class="text-left mt-12">
-                    <p class="text-[11px]">RESORT EM DESTAQUE</p>
-
-                    <h1 class="text-2xl">EcoResort Praia do Forte Bahia</h1>
-
-                    <p class="my-4 text-sm">Hotel qualidade 5 estrelas</p>
-
-                    <p class="my-4 text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia ab animi ducimus consequuntur distinctio, quidem velit culpa, pariatur vero repellendus veniam eaque eligendi tempora odit qui sed, corporis quis assumenda! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem repudiandae aut repellendus, magnam rem, nostrum, ex mollitia labore dolore fugiat vel nam beatae praesentium iure corporis alias veniam non deserunt?</p>
-
-                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus debitis fugit qui tempora a quasi</p>
-
-                    <!--Botão para que o usuário "reserve" uma estadia no Resort em destauque-->
-                    <button class="my-5 flex items-center justify-center py-2 px-2 bg bg-yellow-500 rounded text-yellow-800 font-medium cursor-pointer hover:bg-yellow-400 "> Solicitar Reserva 
-                        <svg class="w-6 h-6 pl-2"  data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                        </svg> 
-                    </button>
-                </div>
+            <!-- Caixa do texto -->
+            <div class="w-full md:w-1/2 text-left mt-12 md:mt-10 md:pl-8">
+                <h2 class="text-[11px] lg:text-[14px] uppercase tracking-wide text-gray-600">RESORT EM DESTAQUE</h2>
+                <h3 class="text-2xl lg:text-[25px] font-bold text-gray-800 mt-2">EcoResort Praia do Forte Bahia</h3>
+                <p class="text-gray-600 lg:text-[16px] ">Hotel qualificado 5 estrelas</p>
+                <p class="mt-4 text-gray-600 lg:text-[18px] 2xl:text-2xl"> 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident deleniti accusantium quisquam tempore, suscipit ipsum perspiciatis, facilis, eligendi maxime exercitationem sapiente incidunt ullam aut expedita saepe aliquid distinctio error laboriosam!
+                </p>
+                <button class="mt-6 bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg shadow hover:bg-yellow-500 lg:text-[16px] cursor-pointer">
+                    Solicitar Reserva →
+                </button>
             </div>
-            
+
+                <!-- Caixa da imagem -->
+            <div class="realtive w-full h-48 md:w-1/2 flex justify-center mt-12">
+                <figure>
+
+                    <img src="images/carrossel-img/carrossel-1.jpg" class=" h-64 rounded-lg shadow-lg md:w-72 md:h-80 2xl:w-80 2xl:h-96 object-cover">
+                    
+                </figure>
+            </div>
+
         </section>
 
         <!--Esta é uma caixa dedicada a mostrar mais resorts dentro de um grid de imagens-->
-        <div class="my-15 text-center text-2xl text-gray-700">
+        <div class="my-28 text-center text-2xl text-gray-700">
             <h1>Conheça mais Resorts</h1>
 
             <div class="max-w-5xl mx-auto grid grid-cols-1 gap-2 my-6 p-2 md:grid-cols-4 md:grid-rows-2 lg:grid-cols-4 lg:grid-rows-2">
 
                 <!-- Imagem grande (esquerda) -->
                 <div class="md:col-span-2 md:row-span-2 relative">
-                    <img src="images/resort-1.jpg" 
+                    <img src="images/nannai-resort.jpg" 
                     alt="foto do local" 
                     class="w-full h-full object-cover rounded-xl">
 
                     <div class="absolute inset-0 flex items-end justify-start">
-                        <p class="text-white pl-4 py-2">Resort dos sonhos</p>
+                        <p class="text-white pl-4 py-2">Nannai Muro Alto</p>
                     </div>
                 </div>
 
                 <!-- Imagem maior à direita em cima -->
                 <div class=" md:col-span-2 md:row-span-1 relative">
-                    <img src="images/praia-2.jpg" 
+                    <img src="images/maldivas.jpg" 
                         alt="" 
                         class="w-full h-full object-cover rounded-xl">
+
                         <div class="absolute inset-0 flex items-end justify-start">
-                            <p class="text-white pl-4 py-2 ">Salinas do Maragogi</p>
+                            <p class="text-white pl-4 py-2 ">Maldivas</p>
                         </div>
                 </div>
 
                 <!-- Imagem pequena embaixo à esquerda -->
                 <div class="col-span-1 row-span-1 relative">
-                    <img src="images/praia-3.jpg" 
+                    <img src="images/grand-Palladium.jpg" 
                     alt="" 
                     class="w-full h-full object-cover rounded-xl">
+
                     <div class="absolute inset-0 flex items-end justify-start">
                         <p class="text-white pl-4 py-2">Grand Palladium</p>
                     </div>
@@ -127,13 +123,15 @@
 
                 <!-- Imagem pequena embaixo à direita -->
                 <div class="col-span-1 row-span-1 relative">
-                    <img src="images/praia-4.jpg" 
+                    <img src="images/arraial.jpg" 
                     alt="" 
                     class="w-full h-full object-cover rounded-xl">
+
                     <div class="absolute inset-0 flex items-end justify-start">
                         <p class="text-white pl-4 py-2 text-[18px]"> Arraial d´Ajuda Eco Resort </p>
                     </div>
                 </div>
+
             </div>
 
             <div class="flex items-center justify-center text-sm my-16">
@@ -149,7 +147,7 @@
                     </div>
 
                     <!--Botão de busca -->
-                    <button class="inline-flex items-center text-yellow-900 bg-yellow-500 font-medium px-3 py-2 rounded text-sm">
+                    <button class="inline-flex items-center text-yellow-900 bg-yellow-400 hover:bg-yellow-500 font-medium px-3 py-2 rounded text-sm cursor-pointer ">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path class="w-3 h-3 mr-2" stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                         </svg>
